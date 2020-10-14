@@ -1,13 +1,10 @@
+
+app = Flask(__name__)
 from flask import Flask
 import requests
 from bs4 import BeautifulSoup
 import re
 from urllib.request import Request, urlopen
-
-
-
-app = Flask(__name__)
-
 
 @app.route('/')
 
@@ -24,7 +21,7 @@ def index():
     print (texta)
     print (textb)
 
-    return render_template("index.html", text = text)
+    return render_template("index.html", text = print)
 
 
 
