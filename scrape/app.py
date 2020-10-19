@@ -1,29 +1,24 @@
-
+from Flask import Flask, render_template
 app = Flask(__name__)
-from flask import Flask
-import requests
+
 from bs4 import BeautifulSoup
+import requests
 import re
-from urllib.request import Request, urlopen
 
 @app.route('/')
 
 def index():
     
+   headers = {'user-agent' : 'Mozilla/5.0'}
+   page = requests.get("https://www.reddit.com/r/MemeEconomy/", headers=headers)
+   soup = BeautifulSoup(page.content, 'html.parser')
+   imgs = soup.findAll('img', attrs={'alt':'Post image'})
 
-    headers = {'user-agent' : 'Mozilla/5.0'}
-    page = requests.get("https://www.efficientdrinker.com/beer/", headers=headers)
-    soup = BeautifulSoup(page.content, 'html.parser')
-    a =soup.find_all('td', class_="column-1")[7]
-    b =soup.find_all('td', class_="column-3")[0]
-    textb= b.text
-    texta= a.text
-    print (texta)
-    print (textb)
+   imglist = []
+   for img in imgs :
+      link_src = img.get('src')
+      imglist.append(link_src)
 
-    return render_template("index.html", text = print)
+   picture =imglist[0]
 
-
-
-
-
+   return render_template("index.html", picture = picture) 
