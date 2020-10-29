@@ -22,4 +22,4 @@ def index():
 
 
 
- return render_template ("index.html")
+ return render_template ("index.html","index2.html", "index3.html","index4.html", "index5.html")
