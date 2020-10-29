@@ -8,6 +8,12 @@ from urllib.request import Request, urlopen
 @app.route('/')
 
 def index():
+ #sound= "sound"
+ #music= "music"
+ #electronic= "electronic"
+ #synthesizers= "synthesizers"
+ #Moog= "moog"
+
 
  headers = {'user-agent': 'Mozilla/5.0' }
  page = requests.get('https://en.wikipedia.org/wiki/Epidemiology_of_depression', headers = headers)
@@ -22,4 +28,4 @@ def index():
 
 
 
- return render_template ("index.html","index2.html", "index3.html","index4.html", "index5.html")
+ return render_template ("index.html")
