@@ -1,4 +1,10 @@
-html,body {
-    color:black;
-}
+body {
+    background-color: blanchedalmond;
+    background-size: cover;
 
+}
+h2 {
+    color: black;
+    text-align: center;
+
+}
