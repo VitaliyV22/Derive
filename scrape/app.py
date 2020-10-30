@@ -6,7 +6,7 @@ import requests
 from urllib.request import Request, urlopen
 
 
-@app.route('/index')
+@app.route('/')
 
 def index():
  
