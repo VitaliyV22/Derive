@@ -28,4 +28,4 @@ def index():
 
 
 
- return render_template ("index.html", title =title, paragraph = paragraph)
+ return render_template ("sound.html", title =title, paragraph = paragraph)
