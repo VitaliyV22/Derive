@@ -45,3 +45,61 @@ def ms20():
 
 
  return render_template ("ms20.html", summary =summary)
+
+@app.route('/poly6')
+
+def poly6():
+ 
+ 
+ headers = {'user-agent': 'Mozilla/5.0' }
+ page = requests.get('https://encyclotronic.com/synthesizers/korg/polysix-r6/', headers = headers)
+ soup = BeautifulSoup(page.content, 'html.parser')
+
+ summary = soup.find('div', class_='ipsGrid_span6')
+
+ print(summary.text)
+
+
+
+
+
+ return render_template ("poly6.html", summary =summary)
+
+@app.route('/arp')
+
+def arp():
+ 
+ 
+ headers = {'user-agent': 'Mozilla/5.0' }
+ page = requests.get('https://encyclotronic.com/synthesizers/korg/korg-arp-odyssey-rev-3-duophonic-synthesizer-r175/', headers = headers)
+ soup = BeautifulSoup(page.content, 'html.parser')
+
+ summary = soup.find('div', class_='ipsGrid_span6')
+
+ print(summary.text)
+
+
+
+
+
+ return render_template ("arp.html", summary =summary) 
+
+
+@app.route('/op6')
+
+def op6():
+ 
+ 
+ headers = {'user-agent': 'Mozilla/5.0' }
+ page = requests.get('https://encyclotronic.com/synthesizers/korg/korg-opsix-fm-synthesizer-concept-design-r1934/', headers = headers)
+ soup = BeautifulSoup(page.content, 'html.parser')
+
+ summary = soup.find('div', class_='ipsGrid_span6')
+
+ print(summary.text)
+
+
+
+
+
+ return render_template ("op6.html", summary =summary)
