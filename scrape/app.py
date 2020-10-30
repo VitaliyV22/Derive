@@ -16,11 +16,14 @@ def sound():
  page = requests.get('https://en.wikipedia.org/wiki/Sound', headers = headers)
  soup = BeautifulSoup(page.content, 'html.parser')
  
+ 
  title = soup.find("title")
  paragraph = soup.find_all("p")
- print(title.get_text()) 
- for each in paragraph: 
-    print (str(each.get_text()))
+ 
+ print(title.get_text())
+ for div in paragraph: 
+    print(div.text)
+
 
 
 
