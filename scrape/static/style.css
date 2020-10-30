@@ -1,10 +1,13 @@
 body {
-    color:powderblue;
-}
-h1 {
-    color:black;
-    font-size: xx-large;
-    font-weight: 200;
-    font-style: oblique;
-
-}
+    background-color: lightblue;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
