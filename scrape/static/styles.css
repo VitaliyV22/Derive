@@ -2,6 +2,13 @@ body {
     background-color:burlywood;
 }
 h1 {
-    color: rgb(15, 211, 236);
+    color:black;
     font-size: large;
+
 }
+
+p {
+
+    color: blue;
+}
+
