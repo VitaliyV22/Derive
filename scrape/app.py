@@ -16,7 +16,7 @@ def index():
 
 
  headers = {'user-agent': 'Mozilla/5.0' }
- page = requests.get('https://en.wikipedia.org/wiki/Epidemiology_of_depression', headers = headers)
+ page = requests.get("https://en.wikipedia.org/wiki/Sound", headers = headers)
  soup = BeautifulSoup(page.content, 'html.parser')
  
  title = soup.find("title")
