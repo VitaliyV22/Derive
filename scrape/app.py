@@ -28,4 +28,4 @@ def index():
 
 
 
- return render_template ("index.html", title =title)
+ return render_template ("index.html", title =title, paragraph = paragraph)
