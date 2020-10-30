@@ -6,7 +6,7 @@ import requests
 from urllib.request import Request, urlopen
 
 
-@app.route('/sound')
+@app.route('/')
 
 def sound():
  
@@ -25,4 +25,4 @@ def sound():
 
 
 
- return render_template ("sound.html", title =title, paragraph = paragraph)
+ return render_template ("index.html", title =title, paragraph = paragraph)
