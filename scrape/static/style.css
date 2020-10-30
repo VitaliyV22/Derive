@@ -1,8 +1,10 @@
 body {
-    background-color:burlywood;
+    background-color:powderblue;
 }
 h1 {
     color:black;
-    font-size: large;
+    font-size: xx-large;
+    font-weight: 200;
+    font-style: oblique;
 
 }
