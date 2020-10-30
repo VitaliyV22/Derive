@@ -10,22 +10,17 @@ from urllib.request import Request, urlopen
 
 def sound():
  
-
-
+ 
  headers = {'user-agent': 'Mozilla/5.0' }
- page = requests.get('https://en.wikipedia.org/wiki/Sound', headers = headers)
+ page = requests.get('https://encyclotronic.com/synthesizers/korg/prototype-one-r72/', headers = headers)
  soup = BeautifulSoup(page.content, 'html.parser')
- 
- 
- title = soup.find("title")
- paragraph = soup.find_all("p")
- 
- print(title.get_text())
- for p in paragraph: 
-    print(p.get_text)
+
+ summary = soup.find('div', class_='ipsGrid_span6')
+
+ print(summary.text)
 
 
 
 
 
- return render_template ("index.html", title =title, paragraph = paragraph)
+ return render_template ("index.html", summary =summary)
