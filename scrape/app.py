@@ -5,14 +5,11 @@ from bs4 import BeautifulSoup
 import requests
 from urllib.request import Request, urlopen
 
-@app.route('/')
 
-def index():
- #sound= "sound"
- #music= "music"
- #electronic= "electronic"
- #synthesizers= "synthesizers"
- #Moog= "moog"
+@app.route('/sound')
+
+def sound():
+ 
 
 
  headers = {'user-agent': 'Mozilla/5.0' }
@@ -20,10 +17,10 @@ def index():
  soup = BeautifulSoup(page.content, 'html.parser')
  
  title = soup.find("title")
- paragraph = soup.find("p")
-
+ paragraph = soup.find_all("p")
  print(title.get_text()) 
- print(paragraph.get_text())
+ for each in paragraph: 
+    print (str(each.get_text()))
 
 
 
