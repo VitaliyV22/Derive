@@ -22,7 +22,7 @@ def sound():
  
  print(title.get_text())
  for p in paragraph: 
-    print(p.text)
+    print(p.text())
 
 
 
