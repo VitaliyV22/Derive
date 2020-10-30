@@ -21,8 +21,8 @@ def sound():
  paragraph = soup.find_all("p")
  
  print(title.get_text())
- for div in paragraph: 
-    print(div.text)
+ for p in paragraph: 
+    print(p.text)
 
 
 
